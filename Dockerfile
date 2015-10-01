@@ -1,7 +1,7 @@
-FROM armbuilds/golang:1.4
+FROM armbuilds/golang
 
 RUN apt-get update && \
-    apt-get install -y librados-dev apache2-utils && \
+    apt-get install -y librados-dev apache2-utils make git && \
     rm -rf /var/lib/apt/lists/*
 
 ENV DISTRIBUTION_DIR /go/src/github.com/docker/distribution
